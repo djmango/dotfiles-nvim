@@ -14,7 +14,7 @@ vim.opt.compatible = false  -- Use Vim defaults rather than vi (opposite of noco
 vim.opt.wrap = true         -- Enable line wrapping
 vim.opt.linebreak = true    -- Break lines at word boundaries
 
--- Your existing Lua block for VSCode-Neovim integration
+-- Lua block for VSCode-Neovim integration
 local function move(d)
   return function()
     -- Only works in charwise visual mode
@@ -37,9 +37,8 @@ vim.keymap.set({ 'v' }, 'gj', move('j'), { expr = true })
 vim.keymap.set({ 'v' }, 'gk', move('k'), { expr = true })
 
 require("config.lazy")
-require("lazy").setup("plugins")
 
 vim.cmd[[colorscheme tokyonight]]
 
-vim.keymap.set("n", "gr", require('substitute').operator, { noremap = true })
-vim.keymap.set("x", "gr", require('substitute').visual, { noremap = true })
+vim.keymap.set("n", "s", require('substitute').operator, { noremap = true })
+vim.keymap.set("x", "s", require('substitute').visual, { noremap = true })
