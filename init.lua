@@ -5,6 +5,10 @@ vim.opt.clipboard:append("unnamedplus")
 vim.keymap.set("n", "j", "gj", { noremap = true })
 vim.keymap.set("n", "k", "gk", { noremap = true })
 
+-- Make H and L go to the start and end of the line
+vim.keymap.set("n", "H", "^", { noremap = true })
+vim.keymap.set("n", "L", "$", { noremap = true })
+
 -- Optional: Keep original j/k behavior available with gj/gk (uncomment if desired)
 -- vim.keymap.set("n", "gj", "j", { noremap = true })
 -- vim.keymap.set("n", "gk", "k", { noremap = true })
