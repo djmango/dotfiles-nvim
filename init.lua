@@ -9,14 +9,16 @@ vim.keymap.set("n", "k", "gk", { noremap = true })
 vim.keymap.set("n", "H", "^", { noremap = true })
 vim.keymap.set("n", "L", "$", { noremap = true })
 
--- Optional: Keep original j/k behavior available with gj/gk (uncomment if desired)
--- vim.keymap.set("n", "gj", "j", { noremap = true })
--- vim.keymap.set("n", "gk", "k", { noremap = true })
+-- Keep original j/k behavior available with gj/gk
+vim.keymap.set("n", "gj", "j", { noremap = true })
+vim.keymap.set("n", "gk", "k", { noremap = true })
 
--- Basic recommended settings
 vim.opt.compatible = false  -- Use Vim defaults rather than vi (opposite of nocompatible)
 vim.opt.wrap = true         -- Enable line wrapping
 vim.opt.linebreak = true    -- Break lines at word boundaries
+
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 -- Lua block for VSCode-Neovim integration
 local function move(d)
